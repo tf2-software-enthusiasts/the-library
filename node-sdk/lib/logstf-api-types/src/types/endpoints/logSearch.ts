@@ -1,10 +1,10 @@
-import type { LogSearchConfig } from "./logSearchConfig";
+import type { LogSearchRequest } from "./logSearchRequest";
 
 export type LogSearchResponse = {
   success: boolean;
   results: number;
   total: number;
-  parameters: LogSearchConfig;
+  parameters: LogSearchRequest;
   logs: [
     {
       id: number;
