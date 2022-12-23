@@ -1,3 +1,1 @@
-import { hello } from "common";
-
-console.log(hello);
+export * from "./logstf";
