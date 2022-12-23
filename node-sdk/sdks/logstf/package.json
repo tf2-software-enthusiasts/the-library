@@ -9,7 +9,6 @@
     "build": "tsup"
   },
   "dependencies": {
-    "@sapphire/fetch": "^2.4.1",
     "common": "*"
   },
   "devDependencies": {
