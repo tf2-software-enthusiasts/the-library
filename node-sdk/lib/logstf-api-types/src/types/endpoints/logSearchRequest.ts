@@ -1,4 +1,4 @@
-export type LogSearchConfig = {
+export type LogSearchRequest = {
   title: string | null;
   map: string | null;
   uploader: string | null;

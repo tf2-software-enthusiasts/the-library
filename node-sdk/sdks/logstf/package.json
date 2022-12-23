@@ -9,7 +9,8 @@
     "build": "tsup"
   },
   "dependencies": {
-    "common": "*"
+    "common": "*",
+    "logstf-api-types": "*"
   },
   "devDependencies": {
     "@sapphire/ts-config": "^3.3.4",

@@ -1,10 +1,12 @@
 import { fetch, FetchResultTypes, isNullishOrEmpty } from "common";
-import type { LogById } from "types/logById";
-import type { LogSearchResponse } from "types/logSearch";
-import type { LogSearchConfig } from "types/logSearchConfig";
+import type {
+  LogById,
+  LogSearchRequest,
+  LogSearchResponse,
+  LogUploadRequest,
+  LogUploadResponse,
+} from "logstf-api-types";
 import { URLSearchParams } from "node:url";
-import type { LogUploadConfig } from "types/logUploadConfig";
-import type { LogUploadResponse } from "types/logUploadResponse";
 
 const getRawLogUrl = (id: string) => `http://logs.tf/logs/log_${id}.log.zip`;
 
@@ -38,7 +40,7 @@ export class LogsTf {
     player = [],
     title = null,
     uploader = null,
-  }: LogSearchConfig) {
+  }: LogSearchRequest) {
     if (limit > 10_000) {
       throw new Error("Cannot take more than 10,000 logs at a time");
     }
@@ -78,7 +80,7 @@ export class LogsTf {
       map,
       updatelog = null,
       uploader = "node-logs-sdk",
-    }: LogUploadConfig
+    }: LogUploadRequest
   ) {
     if (isNullishOrEmpty(title)) {
       throw new Error("Title cannot be empty!");
