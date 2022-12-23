@@ -5,11 +5,15 @@
   "types": "src/index.ts",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "build": "tsup"
+  },
   "dependencies": {
     "common": "*"
   },
   "devDependencies": {
     "@sapphire/ts-config": "^3.3.4",
+    "tsup": "^6.5.0",
     "typescript": "^4.9.4"
   }
 }
