@@ -11,14 +11,17 @@ import { URLSearchParams } from "node:url";
 const getRawLogUrl = (id: string) => `http://logs.tf/logs/log_${id}.log.zip`;
 
 export class LogsTf {
+  /**
+   * URL of the API for logs.tf
+   */
   #logsApiUrl = "https://logs.tf/api/v1";
-  #apiKey: string;
 
-  public constructor(apiKey: string) {
-    if (isNullishOrEmpty(apiKey)) {
-      throw new Error("Expected an API key!");
-    }
+  /**
+   * (Optional) - The API key for logs.tf
+   */
+  #apiKey?: string;
 
+  public constructor(apiKey?: string) {
     this.#apiKey = apiKey;
   }
 
@@ -82,6 +85,11 @@ export class LogsTf {
       uploader = "node-logs-sdk",
     }: LogUploadRequest
   ) {
+    // Note- We check for nullability here since API key is only required when uploading
+    if (isNullishOrEmpty(this.#apiKey)) {
+      throw new Error("Expected a valid API key, got a nullish value instead");
+    }
+
     if (isNullishOrEmpty(title)) {
       throw new Error("Title cannot be empty!");
     }
