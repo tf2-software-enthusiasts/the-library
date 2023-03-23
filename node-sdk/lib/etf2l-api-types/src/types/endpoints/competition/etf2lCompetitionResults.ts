@@ -1,5 +1,5 @@
 import type { CompetitionResults } from "types/competition/competitionResult";
 
-export type etf2lCompetitionResults = {
+export type Etf2lCompetitionResults = {
     results: CompetitionResults;
 };

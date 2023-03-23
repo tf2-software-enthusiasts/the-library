@@ -1,7 +1,7 @@
 import type { Status } from "types/common/status";
-import type { Whitelist } from "types/whitelists/whitelists";
+import type { Whitelists } from "types/whitelists/whitelists";
 
-export type Etf2lWhitelist = {
-  whitelists: Whitelist;
+export type Etf2lWhitelists = {
+  whitelists: Whitelists;
   status: Status;
 };

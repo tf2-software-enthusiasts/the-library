@@ -1,4 +1,4 @@
-export type Whitelist = {
+export type Whitelists = {
   [whiteListName: string]: {
     filename: string;
     last_change: number;
