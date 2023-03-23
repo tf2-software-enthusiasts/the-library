@@ -1,1 +1,1 @@
-export * from "./";
+export * from "./etf2lWhitelist";

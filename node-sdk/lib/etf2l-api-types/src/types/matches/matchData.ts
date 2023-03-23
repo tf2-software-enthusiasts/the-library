@@ -26,4 +26,11 @@ export type MatchData = {
   players: MatchPlayer[];
   bye_week: boolean;
   demos: [];
+  map_results: {
+    match_order: number;
+    clan1: number;
+    clan2: number;
+    map: string;
+    golden_cap: boolean;
+  }[]
 };
