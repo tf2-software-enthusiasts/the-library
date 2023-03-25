@@ -1,8 +1,8 @@
 import type { Classes } from "types/enums/classes";
-import type { Team } from "types/team/team";
 import type { PlayerSteamData } from "./playerSteamData";
+import type { PlayerTeam } from "./playerTeam";
 
-export type PlayerInformationData = {
+export type PlayerData = {
   //TODO:
   bans: null;
   classes: Classes[];
@@ -10,7 +10,7 @@ export type PlayerInformationData = {
   id: number;
   name: string;
   steam: PlayerSteamData;
-  teams: Team;
+  teams: PlayerTeam[];
   title: string;
   urls: {
     results: string;
