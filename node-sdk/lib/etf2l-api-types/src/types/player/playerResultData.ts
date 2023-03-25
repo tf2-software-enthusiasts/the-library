@@ -6,7 +6,7 @@ export type PlayerResultData = {
   clan1: PlayerResultClan;
   clan2: PlayerResultClan;
   competition: CompetitionResultsCompetition;
-  defaultwin: boolean;
+  defaultwin: boolean | null;
   division: CompetitionResultsDivision | null;
   result: number;
   maps: string[];
@@ -14,6 +14,6 @@ export type PlayerResultData = {
   r1: number;
   r2: number;
   round: string;
-  time: number;
+  time: number | null;
   week: number;
 };

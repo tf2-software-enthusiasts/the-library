@@ -1,7 +1,7 @@
 import type { Classes } from "types/enums/classes";
 import type { PlayerSteamData } from "types/player/playerSteamData";
 
-export type RecruitmentData = {
+export type RecruitmentDataPlayer = {
   classes: Classes[];
   comments: {
     count: number;

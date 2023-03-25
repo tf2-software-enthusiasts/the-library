@@ -1,4 +1,4 @@
-import type { MultiPage } from "types/common/multiPage";
+import type { MultiPageSmall } from "types/common";
 import type { PlayerTransferData } from "types/player/playerTransferData";
 
 export type Etf2lPlayerTransfers = {
@@ -9,5 +9,5 @@ export type Etf2lPlayerTransfers = {
     prev: string | null;
     next: string | null;
   };
-  meta: MultiPage;
+  meta: MultiPageSmall;
 };

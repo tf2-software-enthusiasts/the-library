@@ -7,6 +7,7 @@ export * from "./competitionResultsCompetition";
 export * from "./competitionResultsData";
 export * from "./competitionResultsDivision";
 export * from "./competitions";
+export * from "./competitionTable";
 export * from "./competitionTeams";
 export * from "./competitionTeamsData";
 export * from "./competitionTeamStats";

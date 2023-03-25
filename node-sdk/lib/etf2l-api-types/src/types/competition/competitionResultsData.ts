@@ -3,10 +3,10 @@ import type { CompetitionResultsCompetition } from "./competitionResultsCompetit
 import type { CompetitionResultsDivision } from "./competitionResultsDivision";
 
 export type CompetitionResultsData = {
-  clan: Clan;
+  clan1: Clan;
   clan2: Clan;
   competition: CompetitionResultsCompetition;
-  defaultwin: boolean;
+  defaultwin: boolean | null;
   division: CompetitionResultsDivision;
   id: number;
   maps: string[];

@@ -1,7 +1,7 @@
-import type { MatchData } from "types/matches/matchData";
+import type { MatchDataDetails } from "types/matches/matchDataDetails";
 import type { Status } from "types/common/status";
 
 export type Etf2lMatchDetails = {
-  match: MatchData;
+  match: MatchDataDetails;
   status: Status;
 };

@@ -7,13 +7,13 @@ export type TeamMatchData = {
   clan1: Clan;
   clan2: Clan;
   competition: CompetitionResultsCompetition;
-  defaultwin: boolean;
+  defaultwin: boolean | null;
   division: CompetitionResultsDivision;
   result: number;
   maps: string[];
   r1: number;
   r2: number;
   round: string;
-  time: number;
+  time: number | null;
   week: number;
 };

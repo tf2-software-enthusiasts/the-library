@@ -1,5 +1,5 @@
-import type { DemosData } from "types/demos/demosData";
+import type { Demos } from "types/demos";
 
 export type Etf2lDemos = {
-  demos: DemosData[];
+  demos: Demos;
 };

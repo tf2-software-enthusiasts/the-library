@@ -1,22 +1,9 @@
-import type { MatchPlayer } from "types/matches/matchPlayer";
+import type { Player } from "./player";
+import type { PlayerTransferTeam} from "./playerTransferTeam";
 
 export type PlayerTransferData = {
-  //TODO: Create ShortPlayer type
-  by: MatchPlayer;
-  //TODO: Create ShortTeam type
-  team: {
-    id: number;
-    name: string;
-    steam: {
-      avatar: string;
-      group: string;
-    };
-    //TODO: Create enum
-    type: string;
-    url: string;
-    
-  };
-  time: number;
-  //TODO: enum
-  type: string;
+  by: Player;
+  team: PlayerTransferTeam;
+  time: number | null;
+  type: 'left' | 'joined';
 }
