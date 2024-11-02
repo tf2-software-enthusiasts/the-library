@@ -1,4 +1,4 @@
-import type { TeamType } from "./enums/teamType";
+import type { TeamType } from "./enums/teamType.ts";
 
 export type RoundEvent = {
   type: string;

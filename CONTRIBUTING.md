@@ -6,9 +6,10 @@ The [Open Source Guides](https://opensource.guide/) website has great content th
 - [Building Welcoming Communities](https://opensource.guide/building-community/)
 
 ## Get Involved
+
 The best way to get involved with this project is by opening a Pull Request. While this is good, we suggest you take a look at any issues that are marked "Help Wanted". An alternative would be to raise an issue on the GitHub with as much detail as you can put in.
 
-Contributions are welcomed, please do not hesitate to make a pull request! We will guide you along the way.]
+Contributions are welcomed, please do not hesitate to make a pull request! We will guide you along the way.
 
 # Pull Requests
 
@@ -22,4 +23,4 @@ Pull requests should follow these guidelines:
 
 ## License
 
-By contributing to this project, you agree that your contributions will be licensed under its [MIT license](https://github.com/tf2-software-enthusiasts/the-library/blob/main/LICENSE).
+By contributing to this project, you agree that your contributions will be licensed under its [MIT license](LICENSE).
