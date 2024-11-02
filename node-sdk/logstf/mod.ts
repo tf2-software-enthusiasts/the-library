@@ -1,5 +1,7 @@
 /**
- * Interacts with the [logs.tf api](https://logs.tf/about) and provides API types
+ * The [logs.tf](https://logs.tf/about) SDK
+ *
+ * This API provides both the types and methods to interact with the API
  *
  * @module
  */

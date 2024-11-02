@@ -146,7 +146,7 @@ export async function uploadLog(
  * @param logId The log id
  * @returns {Promise<Blob>} The raw log file
  */
-export async function getRawLog(logId: string) {
+export async function getRawLog(logId: string): Promise<Blob> {
   if (!logId) {
     throw new Error("LogId cannot be empty!");
   }

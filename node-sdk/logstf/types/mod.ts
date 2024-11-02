@@ -1,3 +1,9 @@
+/**
+ * Provides types used when interacting with the [logs.tf api](https://logs.tf/about)
+ *
+ * @module
+ */
+
 export * from "./endpoints/mod.ts";
 export * from "./enums/mod.ts";
 
