@@ -1,4 +1,4 @@
-import type { LogSearchRequest } from "./logSearchRequest";
+import type { LogSearchRequest } from "./logSearchRequest.ts";
 
 export type LogSearchResponse = {
   success: boolean;

@@ -1,9 +1,9 @@
-import type { TeamType } from "types/enums/teamType";
-import type { PlayerInformation } from "types/playerInformation";
-import type { RoundEvent } from "types/roundEvent";
-import type { TeamInformation } from "types/teamInformation";
-import type { TeamRoundInfo } from "types/teamRoundInfo";
-import type { Tf2ClassMap } from "types/tf2ClassMap";
+import type { TeamType } from "../mod.ts";
+import type { PlayerInformation } from "../playerInformation.ts";
+import type { RoundEvent } from "../roundEvent.ts";
+import type { TeamInformation } from "../teamInformation.ts";
+import type { TeamRoundInfo } from "../teamRoundInfo.ts";
+import type { Tf2ClassMap } from "../tf2ClassMap.ts";
 
 export type LogById = {
   version: string;

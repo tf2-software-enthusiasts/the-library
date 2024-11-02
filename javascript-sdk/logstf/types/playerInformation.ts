@@ -1,6 +1,6 @@
-import type { ClassStats } from "./classStats";
-import type { TeamType } from "./enums/teamType";
-import type { MedicStats } from "./medicStats";
+import type { ClassStats } from "./classStats.ts";
+import type { TeamType } from "./enums/teamType.ts";
+import type { MedicStats } from "./medicStats.ts";
 
 export type PlayerInformation = {
   team: TeamType;

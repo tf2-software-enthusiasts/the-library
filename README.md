@@ -8,12 +8,12 @@ We wish to provide highly consumable packages for developers to consume, without
 
 # Strategy
 
-The repoistory is set up as a lot of monorepos. There's different folders for each language, such as the `node-sdk` which is a monorepo of TypeScript libraries and packages that can be used to create and maintain both internal types for these APIs and also create SDK (libraries) for those APIs.
+The repoistory is set up as a lot of monorepos. There's different folders for each language, such as the `node-sdk` which is a monorepo of TypeScript libraries and packages that can be used to create and maintain both the types for these APIs and also the SDK for those APIs.
 
 # Contributing
 
-If you wish to contribute, please make sure to read our Contributing guidelines. There's a goal to have consistent design between languages (more or less!), and it will benefit if you could continue to follow those guidelines. Each language may have a set of their own standards to align to that specific language's syntax.
+If you wish to contribute, please make sure to read our [Contributing](CONTRIBUTING) guidelines. There's a goal to have consistent design between languages and it will benefit if you could continue to follow those guidelines. Each language may have a set of their own standards to align to that specific language's syntax.
 
 # Contact
 
-You can contact us by writing a GitHub issue. 
+You can contact us by writing a GitHub issue.
