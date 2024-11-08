@@ -24,7 +24,7 @@ jobs:
         uses: denoland/setup-deno@v2
 
       - name: Test
-        run: deno task test
+        run: deno task test --config javascript-sdk/deno.json
 
   publish-dry-run:
     runs-on: ubuntu-latest
@@ -40,4 +40,4 @@ jobs:
         uses: denoland/setup-deno@v2
 
       - name: Dry Publish
-        run: deno publish --dry-run
+        run: deno publish --dry-run --config javascript-sdk/deno.json
