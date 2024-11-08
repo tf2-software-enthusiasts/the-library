@@ -1,6 +1,6 @@
 sdk:
   - changed-files:
-      - any-glob-to-any-file: ["javscript-sdk/**"]
+      - any-glob-to-any-file: ["**/javscript-sdk/**"]
 logstf:
   - changed-files:
       - any-glob-to-any-file: "**/logstf/**"
