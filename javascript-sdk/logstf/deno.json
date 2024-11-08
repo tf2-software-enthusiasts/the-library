@@ -1,6 +1,6 @@
 {
   "name": "@tf2software/logstf",
-  "version": "0.0.1-alpha1",
+  "version": "0.0.1",
   "exports": {
     ".": "./mod.ts",
     "./api": "./mod.ts",
