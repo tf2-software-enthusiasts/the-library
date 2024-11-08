@@ -1,6 +1,6 @@
 # logs.tf
 
-The types and SDK that can interact with the (logs.tf api)[https://logs.tf/about].
+The types and SDK that can interact with the [logs.tf api](https://logs.tf/about).
 
 ## Install
 
