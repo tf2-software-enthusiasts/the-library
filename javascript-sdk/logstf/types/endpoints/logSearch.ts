@@ -27,11 +27,34 @@ export type LogSearchResponse = {
    */
   logs: [
     {
+      /**
+       * The id of the log
+       */
       id: number;
+
+      /**
+       * The title of the log
+       */
       title: string;
+
+      /**
+       * The map that was played
+       */
       map: string;
+
+      /**
+       * The date the game was played on
+       */
       date: number;
+
+      /**
+       * The number of views the log has
+       */
       views: number;
+
+      /**
+       * The number of players in the log
+       */
       players: number;
     }
   ];

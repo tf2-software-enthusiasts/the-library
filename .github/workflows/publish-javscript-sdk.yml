@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - 'javascript-sdk/**'
+      - "javascript-sdk/**"
 
 jobs:
   publish:
@@ -15,7 +15,16 @@ jobs:
       id-token: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Clone repository
+        uses: actions/checkout@v4
 
-      - name: Publish package
-        run: npx jsr publish
+      - name: Set up Deno
+        uses: denoland/setup-deno@v2
+
+      - name: Test
+        working-directory: ./javascript-sdk
+        run: deno task test
+
+      - name: Publish to JSR
+        working-directory: ./javascript-sdk
+        run: deno publish

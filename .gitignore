@@ -1,1 +1,5 @@
+.DS_Store
+deno.lock
+**/cov/
 docs/
+coverage/

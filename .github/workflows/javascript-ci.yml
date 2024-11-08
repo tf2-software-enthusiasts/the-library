@@ -1,0 +1,44 @@
+name: ci
+on:
+  push:
+    branches: [main]
+    paths:
+      - "javascript-sdk/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "javascript-sdk/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+
+      - name: Set up Deno
+        uses: denoland/setup-deno@v2
+
+      - name: Test
+        working-directory: ./javascript-sdk
+        run: deno task test
+
+  publish-dry-run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v4
+
+      - name: Set up Deno
+        uses: denoland/setup-deno@v2
+
+      - name: Dry Publish
+        run: deno publish --dry-run --config javascript-sdk/deno.json
