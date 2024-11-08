@@ -4,10 +4,10 @@ on:
     branches:
       - main
     paths:
-      - 'javascript-sdk/**'
+      - "javascript-sdk/**"
 
 jobs:
-publish:
+  publish:
     runs-on: ubuntu-latest
 
     permissions:
