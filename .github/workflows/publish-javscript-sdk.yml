@@ -22,7 +22,9 @@ jobs:
         uses: denoland/setup-deno@v2
 
       - name: Test
+        working-directory: ./javascript-sdk
         run: deno task test
 
       - name: Publish to JSR
-        run: deno publish --config javascript-sdk/deno.json
+        working-directory: ./javascript-sdk
+        run: deno publish
