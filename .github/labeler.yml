@@ -1,15 +1,15 @@
 sdk:
   - changed-files:
-      - any-glob-to-any-file: javscript_sdk/**
+      - any-glob-to-any-file: ["javscript-sdk/**"]
 logstf:
   - changed-files:
-      - any-glob-to-any-file: logstf/**
+      - any-glob-to-any-file: "**/logstf/**"
 etf2l:
   - changed-files:
-      - any-glob-to-any-file: etf2l/**
+      - any-glob-to-any-file: "**etf2l/**"
 rgl:
   - changed-files:
-      - any-glob-to-any-file: rgl/**
+      - any-glob-to-any-file: "**/rgl/**"
 demostf:
   - changed-files:
-      - any-glob-to-any-file: demostf/**
+      - any-glob-to-any-file: "**/demostf/**"
