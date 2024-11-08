@@ -1,0 +1,9 @@
+{
+  "name": "@tf2software/demostf",
+  "version": "0.0.1-alpha1",
+  "exports": {
+    ".": "./mod.ts",
+    "./api": "./mod.ts",
+    "./types": "./types/mod.ts"
+  }
+}
