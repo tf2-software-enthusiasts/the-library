@@ -6,10 +6,13 @@ logstf:
       - any-glob-to-any-file: "**/logstf/**"
 etf2l:
   - changed-files:
-      - any-glob-to-any-file: "**etf2l/**"
+      - any-glob-to-any-file: "**/etf2l/**"
 rgl:
   - changed-files:
       - any-glob-to-any-file: "**/rgl/**"
 demostf:
   - changed-files:
       - any-glob-to-any-file: "**/demostf/**"
+core:
+  - changed-files:
+      - any-glob-to-any-file: ".github/**"
