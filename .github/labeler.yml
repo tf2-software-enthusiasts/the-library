@@ -13,3 +13,6 @@ rgl:
 demostf:
   - changed-files:
       - any-glob-to-any-file: "**/demostf/**"
+core:
+  - changed-files:
+      - any-glob-to-any-file: ".github/**"
