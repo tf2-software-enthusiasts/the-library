@@ -1,7 +1,7 @@
 {
   "exclude": [".git", "coverage", "docs", "tests"],
   "tasks": {
-    "ok": "deno lint && deno fmt --check"
+    "test": "deno test -A --clean"
   },
   "workspace": ["./logstf"]
 }

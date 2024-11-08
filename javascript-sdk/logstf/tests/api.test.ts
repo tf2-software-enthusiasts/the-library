@@ -37,7 +37,8 @@ Deno.test("Getting a valid log succeeds", async () => {
 });
 
 Deno.test("Getting an invalid log fails", async () => {
-  const log = await getById("-99999");
+  const log = await getById("999999999999999");
 
   assertEquals(log.success, false);
+  assertEquals(log.error, "Log not found.");
 });

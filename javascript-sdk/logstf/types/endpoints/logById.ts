@@ -17,6 +17,11 @@ export type LogById = {
   version: string;
 
   /**
+   * Gets the error that occurred
+   */
+  error?: string;
+
+  /**
    * Gets the length of the log
    */
   length: number;
