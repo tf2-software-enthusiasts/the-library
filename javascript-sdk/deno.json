@@ -1,5 +1,5 @@
 {
-  "exclude": [".git", "coverage", "docs"],
+  "exclude": [".git", "coverage", "docs", "tests"],
   "tasks": {
     "ok": "deno lint && deno fmt --check"
   },
