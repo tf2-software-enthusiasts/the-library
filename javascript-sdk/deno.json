@@ -3,5 +3,5 @@
   "tasks": {
     "ok": "deno lint && deno fmt --check"
   },
-  "workspace": ["./logstf"]
+  "workspace": ["./logstf", "./etf2l"]
 }

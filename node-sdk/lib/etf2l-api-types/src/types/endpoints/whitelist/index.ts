@@ -1,1 +1,0 @@
-export * from "./etf2lWhitelist";
