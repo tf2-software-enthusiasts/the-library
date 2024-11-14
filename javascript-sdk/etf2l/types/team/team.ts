@@ -23,10 +23,10 @@ export type Team = {
     self: string;
     transfers: string;
   };
-  players: TeamPlayer[]
+  players: TeamPlayer[];
   name_changes: {
     from: string;
     to: string;
     time: number;
-  }[]
+  }[];
 };

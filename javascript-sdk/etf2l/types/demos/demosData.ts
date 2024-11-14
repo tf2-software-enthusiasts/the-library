@@ -1,7 +1,7 @@
 export type DemosData = {
   id: number;
   time: number | null;
-  match: number,
+  match: number;
   download_url: string;
   stv: boolean;
   first_person: boolean;

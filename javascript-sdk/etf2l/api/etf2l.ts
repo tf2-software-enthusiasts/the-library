@@ -1,4 +1,25 @@
-import type { Etf2lBan, Etf2lCompetitionDetails, Etf2lCompetitionList, Etf2lCompetitionMatches, Etf2lCompetitionResults, Etf2lCompetitionTables, Etf2lCompetitionTeams, Etf2lDemos, Etf2lMatch, Etf2lMatchDetails, Etf2lPlayer, Etf2lPlayerResults, Etf2lPlayerTransfers, Etf2lRecruitmentPlayers, Etf2lRecruitmentTeams, Etf2lTeam, Etf2lTeamMatches, Etf2lTeamResults, Etf2lTeamTransfers, Etf2lWhitelists } from "../types/mod.ts";
+import type {
+  Etf2lBan,
+  Etf2lCompetitionDetails,
+  Etf2lCompetitionList,
+  Etf2lCompetitionMatches,
+  Etf2lCompetitionResults,
+  Etf2lCompetitionTables,
+  Etf2lCompetitionTeams,
+  Etf2lDemos,
+  Etf2lMatch,
+  Etf2lMatchDetails,
+  Etf2lPlayer,
+  Etf2lPlayerResults,
+  Etf2lPlayerTransfers,
+  Etf2lRecruitmentPlayers,
+  Etf2lRecruitmentTeams,
+  Etf2lTeam,
+  Etf2lTeamMatches,
+  Etf2lTeamResults,
+  Etf2lTeamTransfers,
+  Etf2lWhitelists,
+} from "../types/mod.ts";
 
 export class Etf2l {
   /**
@@ -7,16 +28,20 @@ export class Etf2l {
   #etf2lApiUrl = "https://api-v2.etf2l.org";
 
   public constructor(apiUrl?: string) {
-    if (apiUrl)
+    if (apiUrl) {
       this.#etf2lApiUrl = apiUrl;
+    }
   }
 
   public async bans({
     player = null,
     status = null,
     reason = null,
-  }: { player: number | null, status: 'active' | 'expired' | null, reason: string | null } = { player: null, status: null, reason: null }) : Promise<Etf2lBan> {
-
+  }: {
+    player: number | null;
+    status: "active" | "expired" | null;
+    reason: string | null;
+  } = { player: null, status: null, reason: null }): Promise<Etf2lBan> {
     const params = new URLSearchParams();
 
     if (player) {
@@ -33,7 +58,7 @@ export class Etf2l {
 
     const data = await fetch(`${this.#etf2lApiUrl}/bans${params.toString()}`);
 
-    return (await data.json()) as Etf2lBan
+    return (await data.json()) as Etf2lBan;
   }
 
   public async competitionList({
@@ -44,8 +69,23 @@ export class Etf2l {
     comp_type = null,
     team_type = null,
     competition = null,
-  }: { archived: number | null, name: string | null, description: string | null, category: string | null, comp_type: string | null, team_type: string | null, competition: string | null } = { archived: null, name: null, description: null, category: null, comp_type: null, team_type: null, competition: null }) : Promise<Etf2lCompetitionList> {
-
+  }: {
+    archived: number | null;
+    name: string | null;
+    description: string | null;
+    category: string | null;
+    comp_type: string | null;
+    team_type: string | null;
+    competition: string | null;
+  } = {
+    archived: null,
+    name: null,
+    description: null,
+    category: null,
+    comp_type: null,
+    team_type: null,
+    competition: null,
+  }): Promise<Etf2lCompetitionList> {
     const params = new URLSearchParams();
 
     if (archived) {
@@ -76,45 +116,61 @@ export class Etf2l {
       params.append("competition_id", competition);
     }
 
-    const data = await fetch(`${this.#etf2lApiUrl}/competition/list${params.toString()}`);
+    const data = await fetch(
+      `${this.#etf2lApiUrl}/competition/list${params.toString()}`,
+    );
 
-    return (await data.json()) as Etf2lCompetitionList
+    return (await data.json()) as Etf2lCompetitionList;
   }
 
   public async competitionDetails(
-    competition_id: number) : Promise<Etf2lCompetitionDetails> {
-    const data = await fetch(`${this.#etf2lApiUrl}/competition/${competition_id}`);
+    competition_id: number,
+  ): Promise<Etf2lCompetitionDetails> {
+    const data = await fetch(
+      `${this.#etf2lApiUrl}/competition/${competition_id}`,
+    );
 
-    return (await data.json()) as Etf2lCompetitionDetails
+    return (await data.json()) as Etf2lCompetitionDetails;
   }
 
   public async competitionTeams(
-    competition_id: number) : Promise<Etf2lCompetitionTeams> {
+    competition_id: number,
+  ): Promise<Etf2lCompetitionTeams> {
+    const data = await fetch(
+      `${this.#etf2lApiUrl}/competition/${competition_id}/teams`,
+    );
 
-
-    const data = await fetch(`${this.#etf2lApiUrl}/competition/${competition_id}/teams`);
-
-    return (await data.json()) as Etf2lCompetitionTeams
+    return (await data.json()) as Etf2lCompetitionTeams;
   }
 
   public async competitionResults(
-    competition_id: number) : Promise<Etf2lCompetitionResults>{
-    const data = await fetch(`${this.#etf2lApiUrl}/competition/${competition_id}/results`);
+    competition_id: number,
+  ): Promise<Etf2lCompetitionResults> {
+    const data = await fetch(
+      `${this.#etf2lApiUrl}/competition/${competition_id}/results`,
+    );
 
-    return (await data.json()) as Etf2lCompetitionResults
+    return (await data.json()) as Etf2lCompetitionResults;
   }
 
   public async competitionMatches(
-    competition_id: number) : Promise<Etf2lCompetitionMatches> {
-    const data = await fetch(`${this.#etf2lApiUrl}/competition/${competition_id}/matches`);
+    competition_id: number,
+  ): Promise<Etf2lCompetitionMatches> {
+    const data = await fetch(
+      `${this.#etf2lApiUrl}/competition/${competition_id}/matches`,
+    );
 
-    return (await data.json()) as Etf2lCompetitionMatches
+    return (await data.json()) as Etf2lCompetitionMatches;
   }
 
-  public async competitionTables(competition_id: number) : Promise<Etf2lCompetitionTables> {
-    const data = await fetch(`${this.#etf2lApiUrl}/competition/${competition_id}/tables`);
+  public async competitionTables(
+    competition_id: number,
+  ): Promise<Etf2lCompetitionTables> {
+    const data = await fetch(
+      `${this.#etf2lApiUrl}/competition/${competition_id}/tables`,
+    );
 
-    return (await data.json()) as Etf2lCompetitionTables
+    return (await data.json()) as Etf2lCompetitionTables;
   }
 
   public async demos({
@@ -122,9 +178,20 @@ export class Etf2l {
     type = null,
     pruned = null,
     from = null,
-    to = null }
-    : { player: number | null, type: string | null, pruned: boolean | null, from: number | null, to: number | null } = { player: null, type: null, pruned: null, from: null, to: null }) : Promise<Etf2lDemos>{
-
+    to = null,
+  }: {
+    player: number | null;
+    type: string | null;
+    pruned: boolean | null;
+    from: number | null;
+    to: number | null;
+  } = {
+    player: null,
+    type: null,
+    pruned: null,
+    from: null,
+    to: null,
+  }): Promise<Etf2lDemos> {
     const params = new URLSearchParams();
 
     if (player) {
@@ -149,7 +216,7 @@ export class Etf2l {
 
     const data = await fetch(`${this.#etf2lApiUrl}/demos${params.toString()}`);
 
-    return (await data.json()) as Etf2lDemos
+    return (await data.json()) as Etf2lDemos;
   }
 
   public async matches({
@@ -164,8 +231,31 @@ export class Etf2l {
     team_type = null,
     round = null,
     players = null,
-  }: { clan1: number | null, clan2: number | null, vs: number | null, scheduled: number | null, competition: number | null, from: number | null, to: number | null, division: string | null, team_type: string | null, round: string | null, players: string[] | null } = { clan1: null, clan2: null, vs: null, scheduled: null, competition: null, from: null, to: null, division: null, team_type: null, round: null, players: null }) : Promise<Etf2lMatch>{
-
+  }: {
+    clan1: number | null;
+    clan2: number | null;
+    vs: number | null;
+    scheduled: number | null;
+    competition: number | null;
+    from: number | null;
+    to: number | null;
+    division: string | null;
+    team_type: string | null;
+    round: string | null;
+    players: string[] | null;
+  } = {
+    clan1: null,
+    clan2: null,
+    vs: null,
+    scheduled: null,
+    competition: null,
+    from: null,
+    to: null,
+    division: null,
+    team_type: null,
+    round: null,
+    players: null,
+  }): Promise<Etf2lMatch> {
     const params = new URLSearchParams();
 
     if (clan1) {
@@ -212,33 +302,37 @@ export class Etf2l {
       params.append("string[]", `[${players.toString()}]`);
     }
 
-    const data = await fetch(`${this.#etf2lApiUrl}/matches${params.toString()}`);
+    const data = await fetch(
+      `${this.#etf2lApiUrl}/matches${params.toString()}`,
+    );
 
-    return (await data.json()) as Etf2lMatch
+    return (await data.json()) as Etf2lMatch;
   }
 
-  public async matchDetails(leagueMatch_id: number) : Promise<Etf2lMatchDetails> {
+  public async matchDetails(
+    leagueMatch_id: number,
+  ): Promise<Etf2lMatchDetails> {
     const data = await fetch(`${this.#etf2lApiUrl}/matches/${leagueMatch_id}`);
 
-    return (await data.json()) as Etf2lMatchDetails
+    return (await data.json()) as Etf2lMatchDetails;
   }
 
-  public async player(id: number) : Promise<Etf2lPlayer>{
+  public async player(id: number): Promise<Etf2lPlayer> {
     const data = await fetch(`${this.#etf2lApiUrl}/player/${id}`);
 
-    return (await data.json()) as Etf2lPlayer
+    return (await data.json()) as Etf2lPlayer;
   }
 
-  public async playerTransfers(id: number) : Promise<Etf2lPlayerTransfers>{
+  public async playerTransfers(id: number): Promise<Etf2lPlayerTransfers> {
     const data = await fetch(`${this.#etf2lApiUrl}/player/${id}/transfers`);
 
-    return (await data.json()) as Etf2lPlayerTransfers
+    return (await data.json()) as Etf2lPlayerTransfers;
   }
 
-  public async playerResults(id: number) : Promise<Etf2lPlayerResults> {
+  public async playerResults(id: number): Promise<Etf2lPlayerResults> {
     const data = await fetch(`${this.#etf2lApiUrl}/player/${id}/results`);
 
-    return (await data.json()) as Etf2lPlayerResults
+    return (await data.json()) as Etf2lPlayerResults;
   }
 
   public async playerRecruitment({
@@ -246,9 +340,20 @@ export class Etf2l {
     player_class = null,
     skill = null,
     type = null,
-    user = null
-  }: { country: string | null, player_class: string[] | null, skill: string[] | null, type: string | null, user: number | null } = { country: null, player_class: null, skill: null, type: null, user: null }) : Promise<Etf2lRecruitmentPlayers> {
-
+    user = null,
+  }: {
+    country: string | null;
+    player_class: string[] | null;
+    skill: string[] | null;
+    type: string | null;
+    user: number | null;
+  } = {
+    country: null,
+    player_class: null,
+    skill: null,
+    type: null,
+    user: null,
+  }): Promise<Etf2lRecruitmentPlayers> {
     const params = new URLSearchParams();
 
     if (country) {
@@ -271,9 +376,11 @@ export class Etf2l {
       params.append("user", user.toString());
     }
 
-    const data = await fetch(`${this.#etf2lApiUrl}/recruitment/players?${params.toString()}`);
+    const data = await fetch(
+      `${this.#etf2lApiUrl}/recruitment/players?${params.toString()}`,
+    );
 
-    return (await data.json()) as Etf2lRecruitmentPlayers
+    return (await data.json()) as Etf2lRecruitmentPlayers;
   }
 
   public async teamRecruitment({
@@ -281,9 +388,20 @@ export class Etf2l {
     player_class = null,
     skill = null,
     type = null,
-    user = null
-  }: { country: string | null, player_class: string[] | null, skill: string[] | null, type: string | null, user: number | null } = { country: null, player_class: null, skill: null, type: null, user: null }) : Promise<Etf2lRecruitmentTeams> {
-
+    user = null,
+  }: {
+    country: string | null;
+    player_class: string[] | null;
+    skill: string[] | null;
+    type: string | null;
+    user: number | null;
+  } = {
+    country: null,
+    player_class: null,
+    skill: null,
+    type: null,
+    user: null,
+  }): Promise<Etf2lRecruitmentTeams> {
     const params = new URLSearchParams();
 
     if (country) {
@@ -306,31 +424,34 @@ export class Etf2l {
       params.append("user", user.toString());
     }
 
-    const data = await fetch(`${this.#etf2lApiUrl}/recruitment/teams${params.toString()}`);
+    const data = await fetch(
+      `${this.#etf2lApiUrl}/recruitment/teams${params.toString()}`,
+    );
 
-    return (await data.json()) as Etf2lRecruitmentTeams
+    return (await data.json()) as Etf2lRecruitmentTeams;
   }
 
-  public async team(clan_id: number) : Promise<Etf2lTeam> {
+  public async team(clan_id: number): Promise<Etf2lTeam> {
     const data = await fetch(`${this.#etf2lApiUrl}/team/${clan_id}`);
 
-    return (await data.json()) as Etf2lTeam
+    return (await data.json()) as Etf2lTeam;
   }
 
-  public async teamTransfers(clan_id: number) : Promise<Etf2lTeamTransfers> {
+  public async teamTransfers(clan_id: number): Promise<Etf2lTeamTransfers> {
     const data = await fetch(`${this.#etf2lApiUrl}/team/${clan_id}/transfers`);
 
-    return (await data.json()) as Etf2lTeamTransfers
+    return (await data.json()) as Etf2lTeamTransfers;
   }
 
-  public async teamResults(clan_id: number) : Promise<Etf2lTeamResults> {
+  public async teamResults(clan_id: number): Promise<Etf2lTeamResults> {
     const data = await fetch(`${this.#etf2lApiUrl}/team/${clan_id}/results`);
 
-    return (await data.json()) as Etf2lTeamResults
+    return (await data.json()) as Etf2lTeamResults;
   }
 
   public async teamMatches(
-    clan_id: number, {
+    clan_id: number,
+    {
       clan1 = null,
       clan2 = null,
       vs = null,
@@ -342,8 +463,32 @@ export class Etf2l {
       team_type = null,
       round = null,
       players = null,
-    }: { clan1: number | null, clan2: number | null, vs: number | null, scheduled: number | null, competition: number | null, from: number | null, to: number | null, division: string | null, team_type: string | null, round: string | null, players: string[] | null } = { clan1: null, clan2: null, vs: null, scheduled: null, competition: null, from: null, to: null, division: null, team_type: null, round: null, players: null }) : Promise<Etf2lTeamMatches> {
-
+    }: {
+      clan1: number | null;
+      clan2: number | null;
+      vs: number | null;
+      scheduled: number | null;
+      competition: number | null;
+      from: number | null;
+      to: number | null;
+      division: string | null;
+      team_type: string | null;
+      round: string | null;
+      players: string[] | null;
+    } = {
+      clan1: null,
+      clan2: null,
+      vs: null,
+      scheduled: null,
+      competition: null,
+      from: null,
+      to: null,
+      division: null,
+      team_type: null,
+      round: null,
+      players: null,
+    },
+  ): Promise<Etf2lTeamMatches> {
     const params = new URLSearchParams();
 
     if (clan1) {
@@ -390,14 +535,16 @@ export class Etf2l {
       params.append("string[]", `[${players.toString()}]`);
     }
 
-    const data = await fetch(`${this.#etf2lApiUrl}/team/${clan_id}/matches${params.toString()}`);
+    const data = await fetch(
+      `${this.#etf2lApiUrl}/team/${clan_id}/matches${params.toString()}`,
+    );
 
-    return (await data.json()) as Etf2lTeamMatches
+    return (await data.json()) as Etf2lTeamMatches;
   }
 
-  public async whitelists() : Promise<Etf2lWhitelists> {
+  public async whitelists(): Promise<Etf2lWhitelists> {
     const data = await fetch(`${this.#etf2lApiUrl}/whitelists`);
 
-    return (await data.json()) as Etf2lWhitelists
+    return (await data.json()) as Etf2lWhitelists;
   }
 }

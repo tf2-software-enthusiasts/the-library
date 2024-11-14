@@ -5,6 +5,6 @@ import type { MultiPage } from "../../common/mod.ts";
 export type Etf2lMatch = {
   results: MultiPage & {
     data: MatchData[];
-  }
+  };
   status: Status;
 };

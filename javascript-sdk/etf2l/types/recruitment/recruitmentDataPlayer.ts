@@ -15,5 +15,5 @@ export type RecruitmentDataPlayer = {
   urls: {
     player: string;
     recruitment: string;
-  }
+  };
 };

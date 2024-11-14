@@ -6,5 +6,5 @@ export type TeamTransferData = {
   who: TeamTransferPlayer;
   team: PlayerTransferTeam;
   time: number | null;
-  type: 'left' | 'joined';
-}
+  type: "left" | "joined";
+};

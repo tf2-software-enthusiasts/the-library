@@ -6,5 +6,5 @@ export type TeamCompetition = {
     competition: string;
     division: Omit<CompetitionResultsDivision, "id">;
     url: string;
-  }
+  };
 };

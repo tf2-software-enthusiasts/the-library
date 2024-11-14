@@ -1,6 +1,6 @@
 export type CompetitionTable = {
   id: number;
-  drop: boolean
+  drop: boolean;
   division_id: number;
   division_name: string;
   country: string;

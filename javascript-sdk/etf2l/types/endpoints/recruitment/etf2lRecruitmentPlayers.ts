@@ -3,5 +3,5 @@ import type { RecruitmentPlayer } from "../../recruitment/recruitmentPlayer.ts";
 
 export type Etf2lRecruitmentPlayers = {
   recruitment: RecruitmentPlayer;
-  status: { status: number, message: string }; // Status;
+  status: { status: number; message: string }; // Status;
 };

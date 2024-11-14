@@ -22,7 +22,7 @@ export type MatchDataDetails = {
     self: string;
     api: string;
   };
-  //TODO: 
+  //TODO:
   players: MatchPlayer[];
   bye_week: boolean;
   demos: [];
@@ -32,5 +32,5 @@ export type MatchDataDetails = {
     clan2: number;
     map: string;
     golden_cap: boolean;
-  }[]
+  }[];
 };

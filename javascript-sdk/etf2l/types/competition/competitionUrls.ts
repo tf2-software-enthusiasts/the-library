@@ -1,6 +1,6 @@
 export type CompetitionUrls = {
-  matches: string,
-  results: string,
-  self: string,
+  matches: string;
+  results: string;
+  self: string;
   teams: string;
 };

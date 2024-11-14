@@ -5,6 +5,6 @@ export type Clan = {
   drop: boolean;
   id: number;
   name: string;
-  steam: SteamData
+  steam: SteamData;
   url: string;
-}
+};
