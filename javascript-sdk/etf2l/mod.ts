@@ -1,5 +1,5 @@
 /**
- * The [logs.tf](https://logs.tf/about) SDK
+ * The [etf2l.org](https://etf2.org/) SDK
  *
  * This API provides both the types and methods to interact with the API
  *
