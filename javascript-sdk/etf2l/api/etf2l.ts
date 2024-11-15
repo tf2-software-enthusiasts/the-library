@@ -360,8 +360,10 @@ export class Etf2l {
       params.append("country", country);
     }
 
-    if (player_class) {
-      params.append("class", `[${player_class.toString()}]`);
+    if (player_class && player_class.length > 0) {
+      for (const p_class of player_class) {
+        params.append("class", p_class);
+      }
     }
 
     if (skill) {

@@ -6,7 +6,6 @@ import type { MatchPlayer } from "./matchPlayer.ts";
 export type MatchDataDetails = {
   clan1: Clan;
   clan2: Clan;
-  //TODO:
   competition: CompetitionResultsCompetition;
   defaultwin: boolean | null;
   division: CompetitionResultsDivision | null;
@@ -22,7 +21,6 @@ export type MatchDataDetails = {
     self: string;
     api: string;
   };
-  //TODO:
   players: MatchPlayer[];
   bye_week: boolean;
   demos: [];

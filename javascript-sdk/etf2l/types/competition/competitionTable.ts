@@ -12,7 +12,7 @@ export type CompetitionTable = {
   maps_lost: number;
   penalty_points: number;
   score: number;
-  ach: number;
+  ach: number | null;
   byes: number;
   seeded_points: number;
 };

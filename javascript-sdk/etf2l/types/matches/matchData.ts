@@ -1,6 +1,6 @@
-import type { Clan } from "types/common/clan";
-import type { CompetitionResultsCompetition } from "types/competition/competitionResultsCompetition";
-import type { CompetitionResultsDivision } from "types/competition/competitionResultsDivision";
+import type { Clan } from "../../types/common/clan.ts";
+import type { CompetitionResultsCompetition } from "../../types/competition/competitionResultsCompetition.ts";
+import type { CompetitionResultsDivision } from "../../types/competition/competitionResultsDivision.ts";
 
 export type MatchData = {
   clan1: Clan;

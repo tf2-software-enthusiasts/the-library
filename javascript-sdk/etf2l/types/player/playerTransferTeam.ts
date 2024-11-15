@@ -5,7 +5,6 @@ export type PlayerTransferTeam = {
     avatar: string;
     group: string | null;
   };
-  //TODO: Create enum
   type: string;
   url: string;
 };

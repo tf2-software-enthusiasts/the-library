@@ -1,7 +1,8 @@
 {
   "exclude": [".git", "coverage", "docs"],
   "tasks": {
-    "ok": "deno lint && deno fmt --check"
+    "ok": "deno lint && deno fmt --check",
+    "test": "deno test --allow-net"
   },
   "workspace": ["./logstf", "./etf2l"]
 }

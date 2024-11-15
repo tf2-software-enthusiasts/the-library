@@ -4,7 +4,7 @@ import type { MultiPageSmall } from "./multiPageSmall.ts";
 export type MultiPage = MultiPageSmall & {
   current_page: number;
   first_page_url: string;
-  from: number;
+  from: number | null;
   last_page: number;
   last_page_url: string;
   links: Link[];
@@ -12,6 +12,6 @@ export type MultiPage = MultiPageSmall & {
   path: string;
   per_page: number;
   prev_page_url: string | null;
-  to: number;
+  to: number | null;
   total: number;
 };
