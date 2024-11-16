@@ -2,6 +2,7 @@
  * Generated type guards for "etf2lTypeGuards.ts".
  * WARNING: Do not manually change this file.
  */
+ // deno-lint-ignore-file
 import { Etf2lBanG, Etf2lCompetitionDetailsG, Etf2lCompetitionListG, Etf2lCompetitionMatchesG, Etf2lCompetitionResultsG, Etf2lCompetitionTeamsG, Etf2lCompetitionTablesG, Etf2lDemosG, Etf2lMatchG, Etf2lMatchDetailsG, Etf2lPlayerG, Etf2lPlayerResultsG, Etf2lPlayerTransfersG, Etf2lRecruitmentPlayersG, Etf2lRecruitmentTeamsG, Etf2lTeamG, Etf2lTeamMatchesG, Etf2lTeamResultsG, Etf2lTeamTransfersG, Etf2lWhitelistsG } from "./etf2lTypeGuards.ts";
 import { Classes } from "../types/enums/classes.ts";
 

@@ -1,4 +1,25 @@
-import type { Etf2lBan, Etf2lCompetitionDetails, Etf2lCompetitionList, Etf2lCompetitionMatches, Etf2lCompetitionResults, Etf2lCompetitionTables, Etf2lCompetitionTeams, Etf2lDemos, Etf2lMatch, Etf2lMatchDetails, Etf2lPlayer, Etf2lPlayerResults, Etf2lPlayerTransfers, Etf2lRecruitmentPlayers, Etf2lRecruitmentTeams, Etf2lTeam, Etf2lTeamMatches, Etf2lTeamResults, Etf2lTeamTransfers, Etf2lWhitelists } from "../types/mod.ts";
+import type {
+  Etf2lBan,
+  Etf2lCompetitionDetails,
+  Etf2lCompetitionList,
+  Etf2lCompetitionMatches,
+  Etf2lCompetitionResults,
+  Etf2lCompetitionTables,
+  Etf2lCompetitionTeams,
+  Etf2lDemos,
+  Etf2lMatch,
+  Etf2lMatchDetails,
+  Etf2lPlayer,
+  Etf2lPlayerResults,
+  Etf2lPlayerTransfers,
+  Etf2lRecruitmentPlayers,
+  Etf2lRecruitmentTeams,
+  Etf2lTeam,
+  Etf2lTeamMatches,
+  Etf2lTeamResults,
+  Etf2lTeamTransfers,
+  Etf2lWhitelists,
+} from "../types/mod.ts";
 
 /** @see {isEtf2lBan} ts-auto-guard:type-guard */
 export type Etf2lBanG = Etf2lBan;
@@ -59,4 +80,3 @@ export type Etf2lTeamTransfersG = Etf2lTeamTransfers;
 
 /** @see {isEtf2lWhitelists} ts-auto-guard:type-guard */
 export type Etf2lWhitelistsG = Etf2lWhitelists;
-
