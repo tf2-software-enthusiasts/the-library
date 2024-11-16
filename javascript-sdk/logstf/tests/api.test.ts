@@ -1,4 +1,4 @@
-import { getById } from "../mod.ts";
+import { getById, search } from "../mod.ts";
 import { assertEquals, assertExists, assertObjectMatch } from "jsr:@std/assert";
 
 Deno.test("Getting a valid log succeeds", async () => {
@@ -41,4 +41,16 @@ Deno.test("Getting an invalid log fails", async () => {
 
   assertEquals(log.success, false);
   assertEquals(log.error, "Log not found.");
+});
+
+Deno.test("Searching logs works as expected", async () => {
+  const searchA = await search({ limit: 1 });
+
+  assertEquals(searchA.success, true);
+  assertEquals(1, searchA.logs.length);
+
+  const searchB = await search({ limit: 1, map: null });
+
+  assertEquals(searchB.success, true);
+  assertEquals(1, searchB.logs.length);
 });
