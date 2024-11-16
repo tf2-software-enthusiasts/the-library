@@ -1,0 +1,15 @@
+/**
+  This tsconfig file is only needed for ts-auto-guard
+**/
+
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "emitDecoratorMetadata": false,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "lib": ["ESNext"],
+    "removeComments": true
+  }
+}

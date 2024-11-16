@@ -3,5 +3,5 @@
   "tasks": {
     "test": "deno test -A --clean"
   },
-  "workspace": ["./logstf"]
+  "workspace": ["./logstf", "./etf2l"]
 }

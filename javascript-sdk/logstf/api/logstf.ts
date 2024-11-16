@@ -57,7 +57,7 @@ export async function getById(logId: string): Promise<LogById> {
  * @returns {Promise<LogSearchResponse>} The response of the search
  */
 export async function search(
-  searchRequest: LogSearchRequest
+  searchRequest: LogSearchRequest,
 ): Promise<LogSearchResponse> {
   const {
     limit = 1000,
