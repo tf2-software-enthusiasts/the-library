@@ -81,7 +81,7 @@ export async function search(
     params.append("map", map);
   }
 
-  if (player.length > 0) {
+  if (player && player.length > 0) {
     params.append("player", player.join(","));
   }
 

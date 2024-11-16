@@ -44,8 +44,13 @@ Deno.test("Getting an invalid log fails", async () => {
 });
 
 Deno.test("Searching logs works as expected", async () => {
-  const log = await search({ limit: 1 });
+  const searchA = await search({ limit: 1 });
 
-  assertEquals(log.success, true);
-  assertEquals(1, log.logs.length);
+  assertEquals(searchA.success, true);
+  assertEquals(1, searchA.logs.length);
+
+  const searchB = await search({ limit: 1, map: null });
+
+  assertEquals(searchB.success, true);
+  assertEquals(1, searchB.logs.length);
 });
