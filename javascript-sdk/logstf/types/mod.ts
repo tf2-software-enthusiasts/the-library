@@ -1,5 +1,5 @@
 /**
- * Provides types used when interacting with the [logs.tf api](https://logs.tf/about)
+ * Provides the types used when interacting with the [logs.tf api](https://logs.tf/about) and its responses
  *
  * @module
  */
@@ -9,6 +9,8 @@ export * from "./enums/mod.ts";
 
 export * from "./classStats.ts";
 export * from "./medicStats.ts";
+export * from "./chat.ts";
+export * from "./killstreak.ts";
 export * from "./playerInformation.ts";
 export * from "./roundEvent.ts";
 export * from "./teamInformation.ts";

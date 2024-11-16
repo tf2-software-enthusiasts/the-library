@@ -17,18 +17,21 @@ const getRawLogUrl = (id: string) => `http://logs.tf/logs/log_${id}.log.zip`;
 
 /**
  * The base URL of the for logs.tf
+ * 
  * @internal
  */
 const logsBaseUrl = "https://logs.tf";
 
 /**
  * The logs API url
+ * 
  * @internal
  */
 const logsApiUrl = `${logsBaseUrl}/api/v1`;
 
 /**
  * The logs upload url
+ * 
  * @internal
  */
 const logsUploadUrl = `${logsBaseUrl}/upload`;
