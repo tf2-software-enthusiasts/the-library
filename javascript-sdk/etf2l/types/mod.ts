@@ -5,6 +5,7 @@ export * from "./endpoints/mod.ts";
 export * from "./enums/mod.ts";
 export * from "./matches/mod.ts";
 export * from "./player/mod.ts";
+export * from "./query/mod.ts";
 export * from "./recruitment/mod.ts";
 export * from "./team/mod.ts";
 export * from "./whitelists/mod.ts";
