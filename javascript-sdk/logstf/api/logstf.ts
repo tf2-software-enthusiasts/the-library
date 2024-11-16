@@ -60,7 +60,7 @@ export async function search(
   searchRequest: LogSearchRequest,
 ): Promise<LogSearchResponse> {
   const {
-    limit = 1000,
+    limit = 10,
     map = null,
     offset = 0,
     player = [],
@@ -81,7 +81,7 @@ export async function search(
     params.append("map", map);
   }
 
-  if (player) {
+  if (player.length > 0) {
     params.append("player", player.join(","));
   }
 
@@ -93,7 +93,7 @@ export async function search(
     params.append("uploader", uploader);
   }
 
-  const response = await fetch(`${logsApiUrl}/log${params.toString()}`);
+  const response = await fetch(`${logsApiUrl}/log?${params.toString()}`);
 
   return (await response.json()) as LogSearchResponse;
 }

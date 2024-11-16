@@ -5,29 +5,35 @@ export type LogSearchRequest = {
   /**
    * The title of the log
    */
-  title: string | null;
+  title?: string;
 
   /**
    * The map of the log
    */
-  map: string | null;
+  map?: string;
 
   /**
    * The steamid of the uploader
    */
-  uploader: string | null;
+  uploader?: string;
   /**
    * The list of steamids that played in the log
    */
-  player: string[] | null;
+  player?: string[];
 
   /**
    * The number of entries to return
+   * 
+   * Note: This cannot exceed 10,000
+   * 
+   * @default 10
    */
-  limit: number;
+  limit?: number;
 
   /**
    * The number of entries to skip
+   * 
+   * @default 0
    */
-  offset: number;
+  offset?: number;
 };
