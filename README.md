@@ -8,7 +8,7 @@ We wish to provide highly consumable packages for developers to consume, without
 
 # Strategy
 
-The repoistory is set up as a lot of monorepos. There's different folders for each language, such as the `node-sdk` which is a monorepo of TypeScript libraries and packages that can be used to create and maintain both the types for these APIs and also the SDK for those APIs.
+The repoistory is set up as a lot of monorepos. There's different folders for each language, such as the `javascript-sdk` which is a monorepo of TypeScript libraries and packages that can be used to create and maintain both the types for these APIs and also the SDK for those APIs.
 
 # Contributing
 
