@@ -1,7 +1,9 @@
 {
   "name": "@tf2software/logstf",
   "version": "0.0.4",
-  "exclude": ["tests"],
+  "publish": {
+    "exclude": ["tests"]
+  },
   "exports": {
     ".": "./mod.ts",
     "./api": "./mod.ts",
