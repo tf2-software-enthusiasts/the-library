@@ -1,8 +1,11 @@
 {
   "name": "@tf2software/etf2l",
-  "version": "0.0.1-alpha1",
+  "version": "0.0.1-alpha2",
   "tasks": {
     "gen-type-guards": "deno run --allow-env --allow-sys --no-lock --allow-read --allow-write npm:ts-auto-guard ./tests/etf2lTypeGuards.ts --debug --project=./tests --import-extension=ts"
+  },
+  "publish": {
+    "exclude": ["tests"]
   },
   "exports": {
     ".": "./mod.ts",
